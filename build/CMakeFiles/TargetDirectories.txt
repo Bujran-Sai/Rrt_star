@@ -1,0 +1,3 @@
+/home/shashank/Videos/ardee_yantrik/build/CMakeFiles/initial.dir
+/home/shashank/Videos/ardee_yantrik/build/CMakeFiles/edit_cache.dir
+/home/shashank/Videos/ardee_yantrik/build/CMakeFiles/rebuild_cache.dir
