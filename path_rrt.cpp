@@ -163,21 +163,21 @@ std::vector<Node*> path_rrt::Run_RRT_Star(const cv::Mat& map, const cv::Point& s
     for(int i=0 ; i< max_iterations; i++){
         
         Node* randNode = sample_rand(map.cols,map.rows);
-        std::cout<<i<<":"<<randNode->x<<","<<randNode->y<<std::endl;
+        //std::cout<<i<<":"<<randNode->x<<","<<randNode->y<<std::endl;
         
         if(inObsticle(map, cv::Point(randNode->x,randNode->y))){
             delete randNode;
-            std::cerr<<"deleted node";
+            std::cerr<<"deleted node\n";
             continue;
         }
 
         Node* nearest = nearestNode(tree,randNode);
-        std::cout<<"nearest: "<<nearest->x<<","<<nearest->y<<std::endl;
+        //std::cout<<"nearest: "<<nearest->x<<","<<nearest->y<<std::endl;
         Node* newNode = steer(nearest, randNode);
         if (newNode == nullptr) {
             continue; // Or skip this iteration safely
         }
-        std::cout<<"newnode: "<<newNode->x<<","<<newNode->y<<std::endl;
+        //std::cout<<"newnode: "<<newNode->x<<","<<newNode->y<<std::endl;
 
 
         
@@ -197,7 +197,7 @@ std::vector<Node*> path_rrt::Run_RRT_Star(const cv::Mat& map, const cv::Point& s
 
         tree.push_back(newNode);
 
-        std::cout<<"tree_size"<<tree.size()<<"\n";
+        //std::cout<<"tree_size"<<tree.size()<<"\n";
 
         if (isGoal_reached(newNode, goalNode)){
             goalNode->parent = newNode;
