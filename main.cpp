@@ -20,7 +20,7 @@ int main(){
     
 /* Runing main function of rrt star algorithm which retuns path */
 
-    std::vector<Node*> path = PP.Run_RRT_Star(map,points.first, points.second, 1500);
+    std::vector<Node*> path = PP.Run_RRT_Star(map,points.first, points.second, 2000);
     std::cout<<path.size()<<std::endl;
     PP.drawPath(map,path);
 

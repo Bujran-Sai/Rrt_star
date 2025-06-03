@@ -9,10 +9,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 # add_executable(test main.cpp)
 include_directories(/usr/include/opencv4)
 
-project(initial)
+project(rrt_star)
 
 find_package(OpenCV REQUIRED)
 
-add_executable(initial main.cpp path_rrt.cpp)
+add_executable(rrt_star main.cpp path_rrt.cpp)
 
-target_link_libraries(initial ${OpenCV_LIBS})
+target_link_libraries(rrt_star ${OpenCV_LIBS})

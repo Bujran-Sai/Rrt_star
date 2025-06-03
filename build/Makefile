@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named initial
+# Target rules for targets named rrt_star
 
 # Build rule for target.
-initial: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 initial
-.PHONY : initial
+rrt_star: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rrt_star
+.PHONY : rrt_star
 
 # fast build rule for target.
-initial/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/initial.dir/build.make CMakeFiles/initial.dir/build
-.PHONY : initial/fast
+rrt_star/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrt_star.dir/build.make CMakeFiles/rrt_star.dir/build
+.PHONY : rrt_star/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/initial.dir/build.make CMakeFiles/initial.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrt_star.dir/build.make CMakeFiles/rrt_star.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -142,7 +142,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/initial.dir/build.make CMakeFiles/initial.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrt_star.dir/build.make CMakeFiles/rrt_star.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -150,7 +150,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/initial.dir/build.make CMakeFiles/initial.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrt_star.dir/build.make CMakeFiles/rrt_star.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 path_rrt.o: path_rrt.cpp.o
@@ -158,7 +158,7 @@ path_rrt.o: path_rrt.cpp.o
 
 # target to build an object file
 path_rrt.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/initial.dir/build.make CMakeFiles/initial.dir/path_rrt.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrt_star.dir/build.make CMakeFiles/rrt_star.dir/path_rrt.cpp.o
 .PHONY : path_rrt.cpp.o
 
 path_rrt.i: path_rrt.cpp.i
@@ -166,7 +166,7 @@ path_rrt.i: path_rrt.cpp.i
 
 # target to preprocess a source file
 path_rrt.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/initial.dir/build.make CMakeFiles/initial.dir/path_rrt.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrt_star.dir/build.make CMakeFiles/rrt_star.dir/path_rrt.cpp.i
 .PHONY : path_rrt.cpp.i
 
 path_rrt.s: path_rrt.cpp.s
@@ -174,7 +174,7 @@ path_rrt.s: path_rrt.cpp.s
 
 # target to generate assembly for a file
 path_rrt.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/initial.dir/build.make CMakeFiles/initial.dir/path_rrt.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rrt_star.dir/build.make CMakeFiles/rrt_star.dir/path_rrt.cpp.s
 .PHONY : path_rrt.cpp.s
 
 # Help Target
@@ -185,7 +185,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... initial"
+	@echo "... rrt_star"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
