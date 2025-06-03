@@ -68,9 +68,19 @@ cv::Mat path_rrt::Obst_init(int h, int w){
             std::cin>>type;
             if(type==1){
                 int x1,x2,y1,y2;
-                std::cout<<"enter two points for a line\n";
+                std::cout<<"enter two points(x1,y1)&(x2,y2) for a line\n";
                 std::cin>>x1>>y1>>x2>>y2;
                 cv::line(map_img, cv::Point(x1,y1), cv::Point(x2,y2), cv::Scalar(0), 7); 
+            }if(type==2){
+                int x,y,r;
+                std::cout<<"enter a center point(x,y) and radius r\n";
+                std::cin>>x>>y>>r;
+                cv::circle(map_img, cv::Point(x,y),r,cv::Scalar(0),-1);
+            }if(type==3){
+                int x,y,h,w;
+                std::cout<<"enter top left corner point(x,y) and height h and width w :\n";
+                std::cin>>x>>y>>h>>w;
+                cv::rectangle(map_img, cv::Point(x,y), cv::Point(x+h,y+w),cv::Scalar(0),cv::FILLED);
             }
 
 
